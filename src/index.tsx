@@ -37,6 +37,10 @@ root.render(
           <Route path="auth/register" element={<RegisterPage />} />
           <Route path="home" element={<HomePage />} />
           <Route path="user/me" element={<AccountPage />} />
+          <Route
+            path="practice"
+            element={<ChallengesPage isPractice={true} />}
+          />
           <Route path="challenge" element={<ChallengesPage />} />
           <Route path="challenge/*" element={<ChallengePage />} />
           <Route path="exercise" element={<ExercisesPage />} />

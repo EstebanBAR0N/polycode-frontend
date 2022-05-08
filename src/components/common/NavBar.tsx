@@ -19,8 +19,8 @@ import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import { toast } from 'react-toastify';
 
 // custom imports
-import PolyCodeButton from '../singleton/PolyCodeButton';
-import NavBarButton from '../singleton/NavBarButton';
+import PolyCodeButton from '../other/PolyCodeButton';
+import NavBarButton from '../other/NavBarButton';
 import { useAuth } from '../../context/useAuth';
 
 // const Search = styled('div')(({ theme }) => ({
@@ -150,7 +150,7 @@ export default function Navbar() {
 
   return (
     // nav bar main container
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1, marginBottom: '5em' }}>
       <AppBar
         position="fixed"
         sx={{
@@ -188,10 +188,7 @@ export default function Navbar() {
               alignItems: 'center',
             }}
           >
-            <NavBarButton
-              name="Practices"
-              destination="/challenge?isPractice=true"
-            />
+            <NavBarButton name="Practices" destination="/practice" />
             <NavBarButton name="Challenges" destination="/challenge" />
             <NavBarButton name="Exercises" destination="/exercise" />
           </Grid>

@@ -1,17 +1,17 @@
 import { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import { useTheme } from '@mui/material/styles';
 import Button from '@mui/material/Button';
+import { useTheme } from '@mui/material/styles';
 import { toast } from 'react-toastify';
 
 // custom imports
 import Navbar from '../common/NavBar';
-import Editor from '../singleton/Editor';
+import Editor from '../other/exercisePageComponents/Editor';
 import defautCodeByLanguage from '../../utils/defaultCodeByLanguage';
-import LanguageChoiceButton from '../singleton/LanguageChoiceButton';
-import OutputChoice from '../singleton/OutputChoice';
-import MarkdownInstructions from '../singleton/MarkdownInstructions';
+import LanguageChoiceButton from '../other/exercisePageComponents/LanguageChoiceButton';
+import OutputChoice from '../other/exercisePageComponents/OutputChoice';
+import MarkdownInstructions from '../other/exercisePageComponents/MarkdownInstructions';
 import useFetch from '../../context/useFetch';
 import { API_URL } from '../../utils/constants';
 import { getToken } from '../../utils/helpers';
@@ -118,7 +118,6 @@ export default function ExercisePage() {
       <Navbar />
       <Box
         sx={{
-          marginTop: '3.5em',
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
@@ -132,7 +131,7 @@ export default function ExercisePage() {
             gridTemplateColumns: { md: '1fr 1fr' },
             gridGap: '25px',
             width: '93vw',
-            height: '93vh',
+            height: '90vh',
           }}
         >
           {/* instructions part */}
@@ -153,7 +152,7 @@ export default function ExercisePage() {
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
-              height: '93vh',
+              height: '90vh',
             }}
           >
             <Grid
