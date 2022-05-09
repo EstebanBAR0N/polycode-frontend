@@ -56,7 +56,7 @@ function useProvideAuth() {
   // ... latest auth object.
   useEffect(() => {
     if (!localStorageState?.userId) {
-      setUser(false);
+      setUser({});
     } else {
       setUser({ id: localStorageState?.userId });
     }

@@ -22,6 +22,8 @@ import ExercisesPage from './components/pages/ExercisesPage';
 import ExercisePage from './components/pages/ExercisePage';
 import ErrorPage from './components/pages/ErrorPage';
 
+import './assets/styles/index.css';
+
 const theme = createTheme(mainTheme);
 
 const root = ReactDOM.createRoot(
@@ -32,7 +34,7 @@ root.render(
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<LoginPage /*LandingPage*/ />} />
+          <Route path="/" element={<LandingPage />} />
           <Route path="auth/login" element={<LoginPage />} />
           <Route path="auth/register" element={<RegisterPage />} />
           <Route path="home" element={<HomePage />} />

@@ -83,6 +83,9 @@ export default function Challenge(props: any) {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
+            paddingTop: '2em',
+            width: '2.5em',
+            height: '2.5em',
           }}
         >
           <Box
@@ -91,8 +94,8 @@ export default function Challenge(props: any) {
             src={props.logo}
             srcSet={props.logo}
             sx={{
-              width: '3em',
-              height: '3em',
+              width: '2.5em',
+              height: '2.5em',
               objectFit: 'cover',
             }}
           />

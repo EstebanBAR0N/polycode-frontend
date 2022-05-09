@@ -14,8 +14,9 @@ export default function Exercise(props: any) {
         width: '20em',
         height: '14em',
         margin: '1em',
+        marginBottom: '4.5em',
         textDecoration: 'none',
-        backgroundColor: '#AADEB6',
+        backgroundColor: '#71CE8B', //'#AADEB6',
       }}
     >
       {/* title + language */}

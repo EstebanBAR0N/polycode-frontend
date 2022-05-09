@@ -1,26 +1,26 @@
 import * as React from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { styled, alpha } from '@mui/material/styles';
-import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import AppBar from '@mui/material/AppBar';
-import IconButton from '@mui/material/IconButton';
-import InputBase from '@mui/material/InputBase';
-import Badge from '@mui/material/Badge';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import SearchIcon from '@mui/icons-material/Search';
-import AccountCircle from '@mui/icons-material/AccountCircle';
-import NotificationsIcon from '@mui/icons-material/Notifications';
-import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
-import { toast } from 'react-toastify';
+import { useTheme } from '@mui/material/styles';
+// import { styled, alpha } from '@mui/material/styles';
+// import IconButton from '@mui/material/IconButton';
+// import InputBase from '@mui/material/InputBase';
+// import Badge from '@mui/material/Badge';
+// import MenuIcon from '@mui/icons-material/Menu';
+// import SearchIcon from '@mui/icons-material/Search';
+// import AccountCircle from '@mui/icons-material/AccountCircle';
+// import NotificationsIcon from '@mui/icons-material/Notifications';
+// import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
+// import { toast } from 'react-toastify';
 
 // custom imports
-import PolyCodeButton from '../other/PolyCodeButton';
-import NavBarButton from '../other/NavBarButton';
+import PolyCodeButton from '../other/navbar/PolyCodeButton';
+import NavBarButton from '../other/navbar/NavBarButton';
 import { useAuth } from '../../context/useAuth';
 
 // const Search = styled('div')(({ theme }) => ({
@@ -156,6 +156,8 @@ export default function Navbar() {
         sx={{
           // color: theme.palette.DARK_GREY.main,
           backgroundColor: 'white',
+          // height: '4em',
+          // justifyContent: 'center',
         }}
       >
         {/* structure container */}

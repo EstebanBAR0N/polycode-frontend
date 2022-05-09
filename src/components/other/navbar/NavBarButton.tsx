@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
 import { useTheme } from '@mui/material/styles';
 
-import '../../assets/styles/fonts.css';
+import '../../../assets/styles/fonts.css';
 
 export default function NavBarButton(props: any) {
   const theme = useTheme();

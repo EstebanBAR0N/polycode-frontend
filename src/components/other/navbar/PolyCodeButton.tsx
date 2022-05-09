@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
 import { useTheme } from '@mui/material/styles';
 
-import '../../assets/styles/fonts.css';
+import '../../../assets/styles/fonts.css';
 
 export default function PolyCodeButton() {
   const theme = useTheme();
@@ -18,7 +18,7 @@ export default function PolyCodeButton() {
         }}
       >
         <Link
-          to="/"
+          to="/home"
           style={{
             color: theme.palette.primary.main,
             fontFamily: 'Hammersmith One',

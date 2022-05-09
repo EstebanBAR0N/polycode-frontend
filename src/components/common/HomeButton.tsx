@@ -7,7 +7,7 @@ export default function HomeButton() {
     // icon and text container
     <Box sx={{ marginTop: { md: '1em' } }}>
       <Link
-        href="/home"
+        href="/"
         variant="body2"
         style={{
           display: 'flex',
@@ -19,7 +19,7 @@ export default function HomeButton() {
       >
         {/* icon and text */}
         <HomeIcon />
-        <span style={{ marginTop: '4px' }}>Home</span>
+        <span style={{ marginTop: '4px' }}>Back</span>
       </Link>
     </Box>
   );

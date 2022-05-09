@@ -2,6 +2,7 @@ import Box from '@mui/material/Box';
 
 // custom imports
 import Challenge from './Challenge';
+import { getImage } from '../../../utils/helpers';
 
 export default function ChallengeList(props: any) {
   return (
@@ -21,7 +22,7 @@ export default function ChallengeList(props: any) {
               name={challenge.name}
               language={challenge.language}
               url={'/challenge/' + challenge.id}
-              logo="../../../assets/languages_logo/js.png"
+              logo={getImage(challenge.language)}
               isEven={index % 2 === 0}
             />
           );

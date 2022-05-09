@@ -79,7 +79,6 @@ export default function ChallengePage() {
           }}
         >
           <ExerciseList exercises={exercises} />
-          {/* <ExerciseList exercises={exercises} /> */}
         </Box>
       </Grid>
     </Box>
