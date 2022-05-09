@@ -14,8 +14,6 @@ export default function ExercisesPage() {
   // fetch exercises
   let { data, loading } = useFetch(API_URL + '/exercise', true);
 
-  console.log(data);
-
   // custom states
   const [exercises, setExercises] = useState([]);
 

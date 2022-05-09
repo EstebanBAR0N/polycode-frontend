@@ -20,8 +20,6 @@ export default function HomePage() {
     true
   );
 
-  console.log(exercise, challenges);
-
   // custom states
   const [exercises, setExercises] = useState([]);
   const defaultValue: any = {};
