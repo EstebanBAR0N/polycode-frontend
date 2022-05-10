@@ -59,10 +59,8 @@ export default function HomePage() {
         <Typography
           variant="h3"
           sx={{
-            // height: '3em',
             marginLeft: '2.5em',
             marginTop: '1.5em',
-            // fontSize: '24px',
             color: '#FFFFFF',
           }}
         >

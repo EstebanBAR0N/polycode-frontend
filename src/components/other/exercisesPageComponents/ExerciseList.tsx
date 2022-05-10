@@ -30,7 +30,7 @@ export default function ExerciseList(props: any) {
         })
       ) : (
         <Box sx={{ width: '100%', textAlign: 'center', marginTop: '5em' }}>
-          No exercise found in this challenge
+          No exercise found
         </Box>
       )}
     </Box>

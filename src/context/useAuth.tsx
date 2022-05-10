@@ -70,7 +70,10 @@ function useProvideAuth() {
 
   const logout = () => {
     setLocalStorageState({});
+    setUser({});
     localStorage.setItem('userData', JSON.stringify({}));
+
+    return 'User successfuly disconnected';
   };
 
   // Return the user object and auth methods
