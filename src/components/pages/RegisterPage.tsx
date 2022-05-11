@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { NavigateOptions, useNavigate } from 'react-router-dom';
 // import { useTheme } from '@mui/material/styles';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
@@ -42,8 +42,9 @@ export default function RegisterPage() {
   }
 
   // redirection sur la page login
-  function goToAuthenticationPage() {
-    navigate('/auth/login');
+  function goToEmailConfirmationPage(email: string) {
+    const params: any = { state: { email: email } };
+    navigate('/auth/confirm-email', params);
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -109,7 +110,7 @@ export default function RegisterPage() {
 
     // redirection sur la page d'authentification si user bien créé
     if (!response.error && !isStatusCodeInError(response.statusCode)) {
-      goToAuthenticationPage();
+      goToEmailConfirmationPage(formData['email']);
       toast.success('Votre compte a bien été créé', {
         position: 'top-right',
         autoClose: 8000,

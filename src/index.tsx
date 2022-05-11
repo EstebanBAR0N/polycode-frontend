@@ -14,6 +14,7 @@ import './assets/styles/fonts.css';
 import LandingPage from './components/pages/LandingPage';
 import LoginPage from './components/pages/LoginPage';
 import RegisterPage from './components/pages/RegisterPage';
+import EmailConfirmationPage from './components/pages/EmailConfirmationPage';
 import HomePage from './components/pages/HomePage';
 import AccountPage from './components/pages/AccountPage';
 import ChallengesPage from './components/pages/ChallengesPage';
@@ -37,6 +38,10 @@ root.render(
           <Route path="/" element={<LandingPage />} />
           <Route path="auth/login" element={<LoginPage />} />
           <Route path="auth/register" element={<RegisterPage />} />
+          <Route
+            path="auth/confirm-email"
+            element={<EmailConfirmationPage />}
+          />
           <Route path="home" element={<HomePage />} />
           <Route path="user/me" element={<AccountPage />} />
           <Route
