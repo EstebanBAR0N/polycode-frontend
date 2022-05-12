@@ -31,7 +31,7 @@ export default function EmailConfirmationPage() {
       confirmationEmailToken: inputCode,
     };
 
-    const result = await fetch(API_URL + '/user/confirm-email', {
+    const result = await fetch(API_URL + '/email/confirm', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -72,7 +72,7 @@ export default function EmailConfirmationPage() {
   // handle resend email
   const handleResendEmail = async () => {
     // resend email
-    const result = await fetch(API_URL + '/auth/send-email', {
+    const result = await fetch(API_URL + '/email/send', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

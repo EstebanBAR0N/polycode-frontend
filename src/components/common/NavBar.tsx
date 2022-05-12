@@ -1,4 +1,3 @@
-import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
@@ -13,11 +12,6 @@ import { useAuth } from '../../context/useAuth';
 export default function Navbar() {
   const auth = useAuth();
   const theme = useTheme();
-  // const navigate = useNavigate();
-
-  // const goToAccount = () => {
-  // navigate('/user/account');
-  // };
 
   return (
     // nav bar main container

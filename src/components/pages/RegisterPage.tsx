@@ -37,9 +37,9 @@ export default function RegisterPage() {
   let fields = {};
 
   // retourne Vrai si les mots de passe sont identiques
-  function areSamePasswords(password: string, confirmPassword: string) {
-    return password === confirmPassword;
-  }
+  // function areSamePasswords(password: string, confirmPassword: string) {
+  //   return password === confirmPassword;
+  // }
 
   // redirection sur la page login
   function goToEmailConfirmationPage(email: string) {

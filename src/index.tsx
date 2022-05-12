@@ -7,7 +7,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ProvideAuth } from './context/useAuth';
 
 // set font to all pages
-// TODO: check si ça le met bien sur tt les pages, sinon voir comment faire
 import './assets/styles/fonts.css';
 
 // page imports

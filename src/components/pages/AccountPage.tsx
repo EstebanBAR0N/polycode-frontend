@@ -108,8 +108,19 @@ export default function AccountPage() {
   };
 
   const handleLogout = async () => {
+    // get token
+    const token = getToken();
+
     // disconnect user
     await auth.logout();
+
+    // delete token in db
+    await fetch(API_URL + '/auth/logout', {
+      method: 'DELETE',
+      headers: {
+        authorization: 'Bearer ' + token,
+      },
+    });
 
     // redirection to landing page
     navigate('/');
