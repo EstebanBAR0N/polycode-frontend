@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { NavigateOptions, useNavigate } from 'react-router-dom';
-// import { useTheme } from '@mui/material/styles';
+import { useNavigate } from 'react-router-dom';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -11,8 +10,10 @@ import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-// import FormHelperText from '@mui/material/FormHelperText';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
 import { toast } from 'react-toastify';
+// import FormHelperText from '@mui/material/FormHelperText';
 
 // custom imports
 import { API_URL } from '../../utils/constants';
@@ -222,6 +223,38 @@ export default function RegisterPage() {
                 onChange={handleChange}
                 // error={fieldsInError}
               />
+            </Grid>
+            <Grid item xs={12}>
+              <FormControlLabel
+                control={<Checkbox name="COPPA" />}
+                label="I am 13 years of age or older"
+              />
+            </Grid>
+            <Grid
+              item
+              xs={12}
+              sx={{
+                display: 'flex',
+                flexDirection: 'row',
+                alignItems: 'center',
+              }}
+            >
+              <FormControlLabel
+                control={<Checkbox name="tos" />}
+                label="I agree to the"
+              />
+              <Box
+                sx={{
+                  marginLeft: '-0.6em',
+                  display: 'flex',
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                }}
+              >
+                <a target="_blank" href="/terms-of-service">
+                  Terms of Service
+                </a>
+              </Box>
             </Grid>
           </Grid>
           {/* form helper */}

@@ -21,6 +21,7 @@ import ChallengePage from './components/pages/ChallengePage';
 import ExercisesPage from './components/pages/ExercisesPage';
 import ExercisePage from './components/pages/ExercisePage';
 import ErrorPage from './components/pages/ErrorPage';
+import TermsOfServicePage from './components/pages/TermsOfServicePage';
 
 import './assets/styles/index.css';
 
@@ -41,6 +42,7 @@ root.render(
             path="auth/confirm-email"
             element={<EmailConfirmationPage />}
           />
+          <Route path="/terms-of-service" element={<TermsOfServicePage />} />
           <Route path="home" element={<HomePage />} />
           <Route path="user/me" element={<AccountPage />} />
           <Route
