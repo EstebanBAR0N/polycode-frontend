@@ -17,12 +17,16 @@ export default function ChallengePage() {
   // fetch challenges
   const challengeId = window.location.pathname.split('/')[2];
   let { data, loading } = useFetch(API_URL + '/challenge/' + challengeId, true);
+  let { data: userChallenge, loading: loadingUserChallenge } = useFetch(
+    API_URL + '/challenge/progress/' + challengeId,
+    true
+  );
 
   // custom states
   const defaultChallenge: any = {};
   const [challenge, setChallenge] = useState(defaultChallenge);
   const [exercises, setExercises] = useState([]);
-  const [progress, setProgress] = useState(33);
+  const [progress, setProgress] = useState(0);
 
   // update instructions, loading to data fetched
   useEffect(() => {
@@ -31,6 +35,16 @@ export default function ChallengePage() {
       setExercises(data.exercise);
     }
   }, [data]);
+
+  useEffect(() => {
+    if (userChallenge) {
+      let nbOfExercises = exercises?.length || 1;
+      const nbOfExercisesCompleted = userChallenge?.nbOfExerciseCompleted || 0;
+
+      const progress = (nbOfExercisesCompleted * 100) / nbOfExercises;
+      setProgress(progress);
+    }
+  }, [userChallenge]);
 
   return (
     <Box
