@@ -43,9 +43,12 @@ export default function ChallengePage() {
 
   useEffect(() => {
     if (userChallenge && nbOfExercises > 0) {
-      const nbOfExercisesCompleted = userChallenge?.nbOfExerciseCompleted || 0;
+      const nbOfExercisesCompleted: number =
+        (userChallenge?.nbOfExerciseCompleted as number) || 0;
 
-      const progress = (nbOfExercisesCompleted * 100) / nbOfExercises;
+      let progress: number = Math.floor(
+        (nbOfExercisesCompleted * 100) / nbOfExercises
+      );
       setProgress(progress);
     }
   }, [userChallenge, nbOfExercises]);
