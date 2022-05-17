@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # init ssh connection
-ssh -t -o StrictHostKeyChecking=no esteban@162.38.112.131 << EOF
+ssh -tt -o StrictHostKeyChecking=no esteban@162.38.112.131 << EOF
 
 # update polycode-frontend repo
 cd ~esteban/polycode/polycode-frontend
