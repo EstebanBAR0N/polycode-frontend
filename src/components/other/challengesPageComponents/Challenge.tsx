@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
@@ -74,7 +75,7 @@ export default function Challenge(props: any) {
               fontSize: '22px',
             }}
           >
-            Let's start
+            Let&apos;s start
           </Button>
         </Box>
         {/* logo */}

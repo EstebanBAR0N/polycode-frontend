@@ -1,3 +1,4 @@
+import React from 'react';
 import * as monaco from 'monaco-editor';
 import Editor from '@monaco-editor/react';
 

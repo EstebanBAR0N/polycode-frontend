@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState, useEffect, useContext, createContext } from 'react';
 
 const authContext: React.Context<any> = createContext({});

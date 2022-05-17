@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import Button from '@mui/material/Button';
@@ -140,7 +141,7 @@ export default function EmailConfirmationPage() {
         }}
       >
         <Typography sx={{ margin: '1em' }}>
-          Please, enter the code you've received by email
+          Please, enter the code you&apos;ve received by email
         </Typography>
         <TextField
           id="standard-basic"
