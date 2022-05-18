@@ -52,6 +52,16 @@ export default function AccountPage() {
   const handleSave = async (event: any) => {
     event.preventDefault();
 
+    // no field filled
+    if (
+      !formData['username'] &&
+      !formData['email'] &&
+      !formData['password'] &&
+      !formData['confirmPassword']
+    ) {
+      return;
+    }
+
     // set Fields
     const fields = {
       username: formData['username'].substring(0, 20),
