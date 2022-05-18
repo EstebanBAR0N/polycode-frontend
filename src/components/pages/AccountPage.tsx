@@ -13,14 +13,18 @@ import useFetch from '../../context/useFetch';
 import { useAuth } from '../../context/useAuth';
 import { API_URL } from '../../utils/constants';
 import { isStatusCodeInError } from '../../utils/helpers';
-import { getToken } from '../../utils/helpers';
+import { getToken, getUserData } from '../../utils/helpers';
 
 export default function AccountPage() {
   const auth = useAuth();
   const navigate = useNavigate();
 
   // fetch me
-  let { data, loading } = useFetch(API_URL + '/user/' + auth.user?.id, true);
+  const userDataViaToken = getUserData();
+  let { data, loading } = useFetch(
+    API_URL + '/user/' + userDataViaToken?.userId,
+    true
+  );
 
   // custom states
   const defaultValue: any = {};

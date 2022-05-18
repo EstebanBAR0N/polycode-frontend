@@ -33,3 +33,9 @@ export const getToken = () => {
 
   return token;
 };
+
+export const getUserData = () => {
+  const userData: any = window.localStorage.getItem('userData');
+
+  return JSON.parse(userData);
+};
