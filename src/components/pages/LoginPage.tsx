@@ -10,7 +10,7 @@ import Container from '@mui/material/Container';
 import CssBaseline from '@mui/material/CssBaseline';
 // import FormHelperText from '@mui/material/FormHelperText';
 import Grid from '@mui/material/Grid';
-import Link from '@mui/material/Link';
+import { Link } from 'react-router-dom';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 
@@ -190,9 +190,7 @@ export default function LoginPage(props: any) {
           {/* go to register page button */}
           <Grid container justifyContent="flex-end">
             <Grid item>
-              <Link href="/auth/register" variant="body2">
-                Pas de compte? Créer un compte
-              </Link>
+              <Link to="/auth/register">Pas de compte? Créer un compte</Link>
             </Grid>
           </Grid>
         </Box>

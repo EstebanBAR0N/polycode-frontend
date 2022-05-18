@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # init ssh connection
-
 ssh -tt -o StrictHostKeyChecking=no esteban@162.38.112.131 "
 
 # update polycode-frontend repo

@@ -5,7 +5,7 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
-import Link from '@mui/material/Link';
+import { Link } from 'react-router-dom';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
@@ -291,9 +291,7 @@ export default function RegisterPage() {
           {/* go to login page button */}
           <Grid container justifyContent="flex-end">
             <Grid item>
-              <Link href="/auth/login" variant="body2">
-                Déjà un compte? Se connecter
-              </Link>
+              <Link to="/auth/login">Déjà un compte? Se connecter</Link>
             </Grid>
           </Grid>
         </Box>
