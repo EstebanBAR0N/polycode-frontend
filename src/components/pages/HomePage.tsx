@@ -46,28 +46,49 @@ export default function HomePage() {
       }}
     >
       <Navbar />
-      <Box
-        component={Link}
-        to={'/challenge/' + challenge?.id}
-        sx={{
-          marginBottom: '4em',
-          width: '100%',
-          height: '100%',
-          backgroundColor: '#2A393E',
-          textDecoration: 'none',
-        }}
-      >
-        <Typography
-          variant="h3"
+      {/* head challenge */}
+      <Box>
+        <Box
+          component={Link}
+          to={'/challenge/' + challenge?.id}
           sx={{
-            marginLeft: '2.5em',
-            marginTop: '1.5em',
-            color: '#FFFFFF',
+            display: challenge?.id ? 'flex' : 'none',
+            marginBottom: '4em',
+            width: '100%',
+            height: '100%',
+            backgroundColor: '#2A393E',
+            textDecoration: 'none',
           }}
         >
-          {challenge && challenge?.name ? challenge.name : ''}
-        </Typography>
+          <Typography
+            variant="h3"
+            sx={{
+              marginLeft: '2.5em',
+              marginTop: '1.5em',
+              color: '#FFFFFF',
+            }}
+          >
+            {challenge && challenge?.name ? challenge.name : ''}
+          </Typography>
+        </Box>
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: '100%',
+          }}
+        >
+          <Typography
+            sx={{
+              display: !challenge?.id ? 'flex' : 'none',
+            }}
+          >
+            No challenge found
+          </Typography>
+        </Box>
       </Box>
+      {/* exercises */}
       <Box
         sx={{
           marginTop: '-4em',
