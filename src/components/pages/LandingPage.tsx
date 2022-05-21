@@ -2,12 +2,14 @@ import React from 'react';
 import { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Box from '@mui/material/Box';
+import CardMedia from '@mui/material/CardMedia';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
 // custom imports
 import { useAuth } from '../../context/useAuth';
+import polycode_logo from '../../assets/images/polycode_logo.png';
 
 export default function LandingPage() {
   const auth = useAuth();
@@ -23,25 +25,56 @@ export default function LandingPage() {
     <Grid
       sx={{
         display: 'grid',
-        gridTemplateRows: '1fr 4fr',
+        gridTemplateRows: '2fr 4fr',
         width: '100%',
         height: '100vh',
       }}
     >
-      <Box>
-        <Typography
-          variant="h2"
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          flexDirection: 'column',
+        }}
+      >
+        <CardMedia
+          component="img"
+          image={polycode_logo}
+          alt="polycode_logo"
+          sx={{
+            width: '18em',
+            height: '18em',
+            objectFit: 'cover',
+          }}
+        />
+        <Box
           sx={{
             display: 'flex',
-            justifyContent: 'center',
-            textAlign: 'center',
-            margin: '2em',
-            color: '#2A393E',
-            textDecoration: 'underline 1px #71CE8B',
+            alignItems: 'center',
           }}
         >
-          Welcome to PolyCode
-        </Typography>
+          <Typography
+            variant="h1"
+            sx={{
+              color: '#2A393E',
+              textDecoration: 'underline 1px #71CE8B',
+            }}
+          >
+            Welcome to PolyCode
+          </Typography>
+        </Box>
+        <Box>
+          <Typography
+            sx={{
+              margin: '2em',
+              fontSize: '20px',
+              color: '#747474',
+            }}
+          >
+            The coding interview cracking platform
+          </Typography>
+        </Box>
       </Box>
       <Box
         sx={{
