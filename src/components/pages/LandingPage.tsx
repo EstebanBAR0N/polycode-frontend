@@ -43,8 +43,8 @@ export default function LandingPage() {
           image={polycode_logo}
           alt="polycode_logo"
           sx={{
-            width: '18em',
-            height: '18em',
+            width: '16em',
+            height: '16em',
             objectFit: 'cover',
           }}
         />
@@ -83,7 +83,7 @@ export default function LandingPage() {
           alignItems: 'center',
           margin: '0 auto',
           width: '50%',
-          height: '50vh',
+          height: '40vh',
           border: '1px solid #2A393E',
           backgroundColor: '#FFFFFF',
           boxShadow: '1px 2px 2px #2A393E',
